@@ -4,7 +4,7 @@ interface InputFieldProps {
     inputValue?: string;
     placeHolder?: string;
     type?: string;
-    id?: String;
+    id?: string;
 }
 
 export const InputField = ({ onChangeText = () => null, inputValue, placeHolder, type, id }: InputFieldProps) => {
@@ -16,7 +16,7 @@ export const InputField = ({ onChangeText = () => null, inputValue, placeHolder,
                 onChangeText(e.target.value);
             }}
             value={inputValue}
-        ></input>
+        />
     )
 };
 

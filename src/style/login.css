@@ -42,11 +42,11 @@ body {
 ::placeholder{
     color:rgb(163, 157, 157);
 }
-.inputs{
+.inputContainer{
     display: flex;
     flex-direction: column;
 }
-.inputs input {
+.inputContainer input {
     background-color: #454545;
     border: none;
     margin-top: 10px;
@@ -145,21 +145,21 @@ body {
 footer a:hover{
     text-decoration: underline;
 }
-.block1{
+.footerContainer{
     padding-bottom: 30px;
     color: #737373;
 }
-.block1:hover{
+.footerContainer:hover{
     text-decoration: underline;
 }
-.block2{
+.footerDetails{
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
     display: flex;
     padding-bottom: 20px;
 }
-.block3{
+.footerInformation{
     display: flex;
     justify-content: space-between;
     width: 45%;

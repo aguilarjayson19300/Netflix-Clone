@@ -40,7 +40,6 @@ export const Navbar = () => {
             
             <div className='right'>
                 <span className="material-symbols-rounded icon"> search </span>
-                <span>Jayson Aguilar</span>
                 <span className="material-symbols-rounded icon"> notifications </span>
                 <img src='profile.webp' alt='profile'/>
 
@@ -50,7 +49,12 @@ export const Navbar = () => {
                        onClick = {handleMouseLeave}
                      > arrow_drop_down </span>
                     <div className='option'>
-                        {showOption && <span>Settings</span> } 
+                      <div className='operation'>
+                        {
+                          showOption && <span>Settings</span> 
+                          
+                        } 
+                      </div>
                         {showOption && <span>Logout</span> } 
                     </div>
                 </div>

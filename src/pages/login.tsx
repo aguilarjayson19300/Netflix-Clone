@@ -3,7 +3,7 @@ import '../style/font.css';
 import '../style/icon.css';
 import { InputField } from '../components';
 import { languages } from '../data';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 
 export const Login = () => {
@@ -22,7 +22,7 @@ export const Login = () => {
               <h1>Sign In</h1>
             </div>
 
-            <div className="inputs">
+            <div className="inputContainer">
               <InputField
                 type="text"
                 placeHolder="Email or Phone number"
@@ -68,19 +68,19 @@ export const Login = () => {
 
       <footer className="footer">
         <div className="footerContent">
-          <div className="block1">
+          <div className="footerContainer">
             <span>Question?</span>
             <span>Contact us.</span>
           </div>
 
-          <div className="block2">
+          <div className="footerDetails">
             <a href="#">FAQ</a>
             <a href="#">Help Center</a>
             <a href="#">Term of use</a>
             <a href="#">Privacy</a>
           </div>
 
-          <div className="block3">
+          <div className="footerInformation">
             <a href="#">Cookie Preferences</a>
             <a href="#">Corporate Information</a>
           </div>
