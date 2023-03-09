@@ -12,7 +12,8 @@ export const Navbar = () => {
     const handleMouseLeave = () => {
       setShowOption(false);
     };
-    //========================================================================
+
+
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -50,12 +51,25 @@ export const Navbar = () => {
                      > arrow_drop_down </span>
                     <div className='option'>
                       <div className='operation'>
-                        {
-                          showOption && <span>Settings</span> 
-                          
-                        } 
+                        { showOption && <span className="material-symbols-rounded"> person </span> } 
+                        { showOption && <span> Manage Profile </span> }
                       </div>
+                      <div className='operation'>
+                        { showOption && <span className="material-symbols-rounded"> mood </span> } 
+                        {showOption && <span>Transfer Account</span> } 
+                      </div>
+                      <div className='operation'>
+                        { showOption && <span className="material-symbols-rounded"> contact_page </span> } 
+                        {showOption && <span>Account</span> } 
+                      </div>
+                      <div className='operation'>
+                        { showOption && <span className="material-symbols-rounded"> help_center </span> } 
+                        {showOption && <span>Help Center</span> } 
+                      </div>
+                      <div className='operation'>
+                        { showOption && <span className="material-symbols-rounded"> logout </span> } 
                         {showOption && <span>Logout</span> } 
+                      </div>
                     </div>
                 </div>
             </div>
