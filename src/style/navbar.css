@@ -52,19 +52,25 @@
 }
 .option{
     display: none;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.515);
     border-radius: 5px;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    position: absolute;
 }
 .option span{
     padding: 10px;
     cursor: pointer;
+}
+.option .operation{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
 }
 .right .profile:hover .option{
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 70px;
 }
