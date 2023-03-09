@@ -1,0 +1,6 @@
+.home{
+    background: linear-gradient(to bottom, #000000fb,  rgb(240, 230, 230));
+    color: black;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
