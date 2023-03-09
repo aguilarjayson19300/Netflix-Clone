@@ -1,8 +1,8 @@
 interface InputFieldProps {
-    onChangeText?: (text: string) => void;
-    inputValue?: string;
+    onChangeText: (text: string) => void;
+    inputValue: string;
     placeHolder: string;
-    type: string;
+    type?: string;
 }
 
 export const InputField = ({ onChangeText = () => null, inputValue, placeHolder, type}: InputFieldProps) => {

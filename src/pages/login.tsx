@@ -4,10 +4,13 @@ import '../style/icon.css';
 import { InputField } from '../components';
 import { languages } from '../data';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 export const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <body style={{
       backgroundImage: `url("bgdar.png")`
@@ -24,10 +27,14 @@ export const Login = () => {
 
             <div className="inputContainer">
               <InputField
+                onChangeText={(text) => setEmail(text)}
                 type="text"
                 placeHolder="Email or Phone number"
+                inputValue={email}
               />
               <InputField
+                onChangeText={(text) => setPassword(text)}
+                inputValue={password}
                 type="password"
                 placeHolder="Password"
               />
