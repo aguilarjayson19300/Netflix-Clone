@@ -28,10 +28,10 @@
 .featured .desc{
     margin: 20px 0px;
 }
-.featured .buttons{
+.featured .operation{
     display: flex;
 }
-.buttons button{
+.operation button{
     padding: 15px 40px;
     border: none;
     border-radius: 50px;

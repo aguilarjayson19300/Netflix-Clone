@@ -20,7 +20,7 @@ export const Featured = () => {
                     makes this dream simply a dream and his kung fu talents reside only
                     within his knowledge of moves and artifacts.
                 </span>
-                <div className='buttons'>
+                <div className='operation'>
                     <button className='play'>
                         <span className="material-symbols-rounded"> play_circle </span>
                         <span>Play</span>
