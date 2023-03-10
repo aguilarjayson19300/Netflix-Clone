@@ -1,10 +1,11 @@
 import Navbar from '../components/Navbar';
 import Featured from '../components/Featured';
-import List from '../components/List';
+import MovieList from '../components/MovieList';
 import '../App.css';
 import '../style/home.css';
 import '../style/font.css';
 import '../style/icon.css';
+import { moviesByCategories } from '../services/data';
 
 export const Home = () => {
   return (
@@ -12,11 +13,11 @@ export const Home = () => {
     <div className='home'>
       <Navbar />
       <Featured />
-      <List/>
-      <List/>
-      <List/>
-      <List/>
-      <List/>
+      
+      {moviesByCategories.map((moviesByCategory) => (
+        <MovieList category={moviesByCategory.category} movies={moviesByCategory.movies} />
+      ))}
+
     </div>
   )
 }
