@@ -1,10 +1,13 @@
 import { useRef, useState } from 'react';
 import '../style/list.css';
-import ListItems from './ListItems';
+import ListItems from './MovieItem';
 
-interface ListProps {}
+interface ListProps {
+  category: string,
+  movies: { name: string, imgSrc: string, vidSrc: string }[],
+}
 
-const List: React.FC<ListProps> = () => {
+const List: React.FC<ListProps> = (moviesByCategory) => {
   const listRef = useRef<HTMLDivElement>(null);
   const [slideNumber, setSliderNumber] = useState<number>(0);
 
@@ -24,7 +27,7 @@ const List: React.FC<ListProps> = () => {
 
   return (
     <div className='list'>
-      <span className='listTitle'>Continue to watch</span>
+      <span className='listTitle'>{moviesByCategory.category}</span>
       <div className='wrapper'>
         <span
           className='material-symbols-rounded sliderArrow left'
@@ -34,18 +37,10 @@ const List: React.FC<ListProps> = () => {
         </span>
 
         <div className='listContainer' ref={listRef}>
-          <ListItems index={0}/>
-          <ListItems index={1}/>
-          <ListItems index={2}/>
-          <ListItems index={3}/>
-          <ListItems index={4}/>
-          <ListItems index={5}/>
-          <ListItems index={6}/>
-          <ListItems index={7}/>
-          <ListItems index={8}/>
-          <ListItems index={9}/>
+          {moviesByCategory.movies.map((item) => (
+            <ListItems movie={item} index={0} />
+          ))}
         </div>
-
         <span
           className='material-symbols-rounded sliderArrow right'
           onClick={() => handleClick('right')}

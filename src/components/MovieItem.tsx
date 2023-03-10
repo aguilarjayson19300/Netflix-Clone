@@ -2,21 +2,22 @@ import { useState } from 'react';
 import '../style/listOfItems.css';
 
 interface ListItemsProps {
+  movie: {name: string, imgSrc: string, vidSrc: string};
   index: number;
 }
 
-  const Listitems: React.FC<ListItemsProps> = ({ index }) => {
+  const Listitems: React.FC<ListItemsProps> = ({ movie, index }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const trailer = '/movies/kufupanda.mp4';
+  const trailer = movie.vidSrc;
 
   return (
     <div
       className='listItem'
-      style={{ left: isHovered ? index * 225 - 50 : undefined }}
+      style={{ left: isHovered ? index * 225 - 50 : 0 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src='./movies/kufupandatm.jpg' alt='testimage' />
+      <img src={movie.imgSrc} className='movieCover'/>
 
       {isHovered && (
         <div className='itemInfo'>
