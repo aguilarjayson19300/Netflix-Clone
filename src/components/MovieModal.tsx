@@ -22,7 +22,7 @@ export const MovieModal = ({
                         </div>
                     </div>
                     <video autoPlay muted loop>
-                        <source src="/movies/kufupandahover.mp4" type="video/mp4" />
+                        <source src="/movies/kufupanda.mp4" type="video/mp4" />
                     </video>
                     
                     <div className='movieInfo'>
@@ -89,7 +89,6 @@ export const MovieModal = ({
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>

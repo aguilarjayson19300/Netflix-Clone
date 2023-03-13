@@ -14,11 +14,9 @@ export const Home = () => {
     <div className='home'>
       <Navbar />
       <Featured />
-      
-      {moviesByCategories.map((moviesByCategory) => (
-        <MovieList category={moviesByCategory.category} movies={moviesByCategory.movies} />
-      ))}
-
+        {moviesByCategories.map((moviesByCategory) => (
+          <MovieList category={moviesByCategory.category} movies={moviesByCategory.movies} />
+        ))}
     </div>
   )
 }
