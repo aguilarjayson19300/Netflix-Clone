@@ -4,10 +4,10 @@ import ListItems from './MovieItem';
 
 interface ListProps {
   category: string,
-  movies: { name: string, imgSrc: string, vidSrc: string }[],
+  movies: { name: string, imgSrc: string, vidSrc: string, top: string }[],
 }
 
-const List: React.FC<ListProps> = (moviesByCategory) => {
+const List = (moviesByCategory: ListProps ) => {
   const listRef = useRef<HTMLDivElement>(null);
   const [slideNumber, setSliderNumber] = useState<number>(0);
 
@@ -41,6 +41,7 @@ const List: React.FC<ListProps> = (moviesByCategory) => {
             <ListItems movie={item} index={0} />
           ))}
         </div>
+
         <span
           className='material-symbols-rounded sliderArrow right'
           onClick={() => handleClick('right')}

@@ -5,6 +5,7 @@ import '../App.css';
 import '../style/home.css';
 import '../style/font.css';
 import '../style/icon.css';
+import '../style/transition.css';
 import { moviesByCategories } from '../services/data';
 
 export const Home = () => {
@@ -13,11 +14,9 @@ export const Home = () => {
     <div className='home'>
       <Navbar />
       <Featured />
-      
-      {moviesByCategories.map((moviesByCategory) => (
-        <MovieList category={moviesByCategory.category} movies={moviesByCategory.movies} />
-      ))}
-
+        {moviesByCategories.map((moviesByCategory) => (
+          <MovieList category={moviesByCategory.category} movies={moviesByCategory.movies} />
+        ))}
     </div>
   )
 }

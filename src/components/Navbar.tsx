@@ -46,8 +46,8 @@ export const Navbar = () => {
 
                 <div className='profile'>
                      <span className="material-symbols-rounded icon" 
-                       onMouseEnter = {handleMouseEnter}
-                       onClick = {handleMouseLeave}
+                       onClick = {handleMouseEnter}
+                       onDoubleClick= {handleMouseLeave}
                      > arrow_drop_down </span>
                     <div className='option'>
                       <div className='operation'>
@@ -56,19 +56,19 @@ export const Navbar = () => {
                       </div>
                       <div className='operation'>
                         { showOption && <span className="material-symbols-rounded"> mood </span> } 
-                        {showOption && <span>Transfer Account</span> } 
+                        { showOption && <span>Transfer Account</span> } 
                       </div>
                       <div className='operation'>
                         { showOption && <span className="material-symbols-rounded"> contact_page </span> } 
-                        {showOption && <span>Account</span> } 
+                        { showOption && <span>Account</span> } 
                       </div>
                       <div className='operation'>
                         { showOption && <span className="material-symbols-rounded"> help_center </span> } 
-                        {showOption && <span>Help Center</span> } 
+                        { showOption && <span>Help Center</span> } 
                       </div>
                       <div className='operation'>
                         { showOption && <span className="material-symbols-rounded"> logout </span> } 
-                        {showOption && <span>Logout</span> } 
+                        { showOption && <span>Logout</span> } 
                       </div>
                     </div>
                 </div>
