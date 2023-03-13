@@ -6,6 +6,12 @@ import MovieModal from './MovieModal';
 export const Featured = () => {
     const [showModal, setShowModal] = useState(false)
 
+    if (showModal) {
+        document.body.classList.add('active-modal')
+    } else {
+        document.body.classList.remove('active-modal')
+    }
+
     return (
         <div className='featured'>
             <video autoPlay muted loop>

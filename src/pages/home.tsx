@@ -5,6 +5,7 @@ import '../App.css';
 import '../style/home.css';
 import '../style/font.css';
 import '../style/icon.css';
+import '../style/transition.css';
 import { moviesByCategories } from '../services/data';
 
 export const Home = () => {

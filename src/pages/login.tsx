@@ -1,6 +1,7 @@
 import '../style/login.css';
 import '../style/font.css';
 import '../style/icon.css';
+import '../style/transition.css';
 import { InputField } from '../components';
 import { languages } from '../data';
 import { useNavigate } from 'react-router-dom';
@@ -80,16 +81,20 @@ export const Login = () => {
             <span>Contact us.</span>
           </div>
 
-          <div className="footerDetails">
-            <a href="#">FAQ</a>
-            <a href="#">Help Center</a>
-            <a href="#">Term of use</a>
-            <a href="#">Privacy</a>
+          <div className='footerDetail'>
+            <div className="footerDetails">
+                <a href="#">FAQ</a>
+                <a href="#">Help Center</a>
+                <a href="#">Term of use</a>
+                <a href="#">Privacy</a>
+            </div>
           </div>
 
           <div className="footerInformation">
-            <a href="#">Cookie Preferences</a>
-            <a href="#">Corporate Information</a>
+            <div className='informationSub'>
+              <a href="#">Cookie Preferences</a>
+              <a href="#">Corporate Information</a>
+            </div>
           </div>
 
           <div className="select">
