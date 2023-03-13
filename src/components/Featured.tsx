@@ -15,7 +15,7 @@ export const Featured = () => {
     return (
         <div className='featured'>
             <video autoPlay muted loop>
-                <source src="/movies/kufupanda.mp4" type="video/mp4" />
+                <source src="/movies/kufupandaOne.mp4" type="video/mp4" />
                 Sorry, your browser doesn't support videos.
             </video>
             <div className='info'>

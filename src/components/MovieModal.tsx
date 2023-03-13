@@ -6,7 +6,8 @@ interface MovieModalProps {
 }
 
 export const MovieModal = ({
-    modalStatus
+    modalStatus,
+    modalState
 }: MovieModalProps) => {
     return (
         <>
